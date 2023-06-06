@@ -60,6 +60,7 @@ As a **Writer of History**:
 -   **Git and GitHub**: Used for version control.
 - **Spring Boot**: To build the API
 - **Angular**: To build the front end
+- **Google Maps API**: To point out where events took place
 
 
 # Requirements
