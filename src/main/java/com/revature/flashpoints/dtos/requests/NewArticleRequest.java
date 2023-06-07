@@ -10,5 +10,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class NewArticleRequest {
-    
+    private String user_id;
+    private String token;
+    private String title;
+    private String image_url;
+    private String tag_name;
+    private String content;
 }

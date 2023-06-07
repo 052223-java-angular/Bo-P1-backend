@@ -1,6 +1,6 @@
 package com.revature.flashpoints.controllers;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +22,10 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+    @Autowired
     private final UserService userService;
+
+    @Autowired
     private final JwtTokenService tokenService;
 
     @PostMapping("/register")
@@ -50,7 +53,8 @@ public class AuthController {
             userService.registerUser(req);
 
             return ResponseEntity.status(HttpStatus.CREATED).build();
-        }
+    }
+    
     @PostMapping("/login")
     public ResponseEntity<Principal> login(@RequestBody NewLoginRequest req) {
         Principal principal = userService.login(req);

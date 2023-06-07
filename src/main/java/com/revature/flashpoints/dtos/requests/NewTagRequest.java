@@ -11,6 +11,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class NewTagRequest {
+    private String user_id;
+    private String role_id;
     private String name;
     private String image;
 }

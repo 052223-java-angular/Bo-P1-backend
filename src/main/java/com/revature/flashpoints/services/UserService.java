@@ -61,5 +61,9 @@ public class UserService {
     public boolean isValidEmail(String email) {
         return email.equals("^(.+)@(.+)$");
     }
+
+    // public Optional<User> findById(String id) {
+    //     Optional<User> userOpt = userRepository.findById(id);
+    // }
 }
 

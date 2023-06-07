@@ -11,4 +11,5 @@ import lombok.Setter;
 @Setter
 public class NewRoleRequest {
     private String name;
+    private String token;
 }
